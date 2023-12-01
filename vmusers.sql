@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `vm_user_order` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `vmname` varchar(255) NOT NULL,
   `cpuamount` int(11) NOT NULL,
   `ramamount` int(11) NOT NULL,
@@ -53,6 +53,18 @@ ALTER TABLE `vm_user_order`
 --
 ALTER TABLE `vm_user_order`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+-- --------------------------------------------------------
+
+--
+-- Sample data for table `vm_user_order`
+--
+
+INSERT INTO `vm_user_order` (`vmname`, `cpuamount`, `ramamount`, `storageamount`) VALUES
+('VM1', 2, 2048, 100),
+('VM2', 4, 4096, 250),
+('VM3', 6, 8192, 500);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
