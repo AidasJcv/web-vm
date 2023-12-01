@@ -1,6 +1,6 @@
 <?php
 
-	$newURL = "/order-failed";
+	$newURL = "/order-failed.php";
 
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 		

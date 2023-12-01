@@ -2,28 +2,13 @@
 <html>
 
 <head>
-
-	<link rel="stylesheet" href="style.css">
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
-	</style>
-	<title>Telecoms - Home</title>
-	
+	<title>Telecoms - Quality Solutions</title>
+	<?php include 'addons/stylesheet.html'; ?>
 </head>
 
 <body>
 
-	<ul>
-		<li><a class="active" href="/">Home</a></li>
-		<li style="float:right"><a class="active" href="/get">Get Server</a></li>
-	</ul>
-	
-	<div class="top-div">
-		<div class="top-div-text">
-			<h1>Telecoms</h1>
-			<p>Currently active offer: get a free virtual machine by filling out the form <a href="/get" style="color: #4CAF50">here</a>!</p>
-		</div>
-	</div>
+	<?php include 'addons/navbar.html'; ?>
 	
 	<div style="height: 100px;"> </div>
 	

@@ -1,0 +1,50 @@
+<?php include 'scripts/incl_cookie_auth.php'; ?>
+
+<ul>
+	<li><a <?php echo ($_SERVER['REQUEST_URI'] == '/') ? 'class="active"' : ''; ?> href="/">Home</a></li>
+    <li><a <?php echo ($_SERVER['REQUEST_URI'] == '/get.php') ? 'class="active"' : ''; ?> href="/get.php">Get Server</a></li>
+    
+	<?php
+	
+		$cookie_name = "session_id";
+	
+		if (!isset($_COOKIE[$cookie_name])) {
+			echo '<li style="float:right"><a class="active" href="/auth/login.php">Login</a></li>';
+		} else {
+		
+			$host = 'localhost';
+			$username = 'webserver';
+			$password = 'admin';
+			$database = 'sessions';
+
+			$mysqli = new mysqli($host, $username, $password, $database);
+
+			if ($mysqli->connect_error) {
+				die('Connection failed: ' . $mysqli->connect_error);
+			}
+		
+			$cookie_value = $_COOKIE[$cookie_name];
+			$cookie_value = $mysqli->real_escape_string($cookie_value);
+			$query = "SELECT * FROM sessions_data WHERE session_id = '$cookie_value'";
+			$result = $mysqli->query($query);
+		
+			if ($result && $result->num_rows > 0) {
+				$row = $result->fetch_assoc();
+				echo '<li style="float:right"><a style="background-color: #FF4444" class="active" href="/scripts/test.php?logout=true">Logout</a></li>';
+				echo '<li style="float:right"><a style="background-color: #333333" href="#">Welcome, ' . $row['username'] . '</a></li>';
+			} else {
+				echo '<li style="float:right"><a class="active" href="/auth/login.php">Login</a></li>';
+			}
+			
+		}
+
+	?>
+
+</ul>
+
+<div class="top-div">
+	<div class="top-div-text">
+		<h1>Telecoms</h1>
+		<p>Currently active offer: get a free virtual machine by filling out the form <a href="/get.php" style="color: #4CAF50">here</a>!</p>
+	</div>
+</div>
