@@ -48,10 +48,10 @@
 			if ($result && $result->num_rows > 0) {
 				$row = $result->fetch_assoc();
 				
-				$query = "insert into vminfo (owner_id, cpu, ram) values (" . $row["user_id"] . ", $cpu, $ram, '')";
+				$query = "insert into vminfo (owner_id, cpu, ram) values (" . $row["user_id"] . ", $cpu, $ram)";
 				$result = $dbmysqli->query($query);
 				
-				$newURL = "/thank-you";
+				$newURL = "/thank-you.php";
 			}
 		}
 	}
