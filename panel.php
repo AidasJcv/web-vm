@@ -65,6 +65,8 @@
 				
 				if ($result && $result->num_rows > 0) {
 					$row = $result->fetch_assoc();
+
+					$user_id = $row["user_id"];
 					
 					$query = "select vm_id, connect_info from users.vminfo where owner_id=$user_id";
 					$result = $dbmysqli->query($query);
