@@ -16,7 +16,7 @@
 		if ($row) {
 			echo "username: " . $row["username"] . ", id: " . $row["user_id"];
 		} else {
-			header('Location: /auth/login.php');
+			header('Location: /auth/login.php?status=noauth');
 			exit();
 		}
 	
