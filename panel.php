@@ -24,7 +24,8 @@
 	
 	<div id="outer" style="margin-top: 30px">
 		<div id="inner" style="text-align: center">
-			<h2>Active virtual machines:</h2>
+			<h2>User Control Panel</h2>
+			
 			<?php
 
 				$wshost = 'localhost';
@@ -75,6 +76,8 @@
 							
 						}
 
+					} else {
+						echo "<p>No virtual machines found. Try creating some!</p>"
 					}
 				} else {
 
