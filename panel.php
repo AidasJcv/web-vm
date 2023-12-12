@@ -76,7 +76,16 @@
 						
 						while ($row = $dbmysqli->fetch_assoc()) {
 
-							echo "<tr> <td>" . $counter . "</td> <td>" . $row["vm_id"] . "</td> <td>" . $row["connection_info"] . "</td> </tr>";
+							$temp = str_replace(" ", "", $row["connection_info"]);
+							$temp = str_replace("\n", "", $temp);
+
+							if ($temp == "NULL") {
+								$temp = "Waiting for VM to start...";
+							} else {
+								$temp = $row["connection_info"];
+							}
+							
+							echo "<tr> <td>" . $counter . "</td> <td>" . $row["vm_id"] . "</td> <td>" . $temp . "</td> </tr>";
 							$counter += 1;
 							
 						}
