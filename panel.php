@@ -95,10 +95,6 @@
 					} else {
 						echo "<div style='text-align: center'><p>No virtual machines found.</p></div>";
 					}
-				} else {
-
-					
-					
 				}
 
 			?>
