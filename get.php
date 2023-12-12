@@ -33,7 +33,7 @@
 					</div>
 					<div>
 						<p style="text-align: left;">CPU: <span id="cpu_display"></span>VCores</p>
-						<input name="cpu" id="cpu_slider" style="width: 100%" type="range" min="0.1" max="0.3" value="1" step="0.1">
+						<input name="cpu" id="cpu_slider" style="width: 100%" type="range" min="0.1" max="0.3" value="0.1" step="0.1">
 					</div>
 					<input type="submit" value="Get Server" form="getserver">
 				</form>
