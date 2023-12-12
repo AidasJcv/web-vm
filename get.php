@@ -13,9 +13,7 @@
 	
 		$row = is_authenticated();
 	
-		if ($row) {
-			echo "username: " . $row["username"] . ", id: " . $row["user_id"];
-		} else {
+		if (!$row) {
 			header('Location: /auth/login.php?status=noauth');
 			exit();
 		}
