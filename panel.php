@@ -24,20 +24,7 @@
 	
 	<div id="outer" style="margin-top: 30px">
 		<div id="inner" style="text-align: center">
-			<p>To gain access to your very own virtual machine/server, fill out this form and specify the amount of resources (CPU, RAM and storage) you require.</p>
-			<fieldset id="inner" style="background-color: rgb(60 60 60);">
-				<form action="/scripts/submit.php" method="POST" id="getserver">
-					<div>
-						<p style="text-align: left;">RAM: <span id="ram_display"></span>MB</p>
-						<input name="ram" id="ram_slider" style="width: 100%" type="range" min="256" max="1024" value="384" step="64">
-					</div>
-					<div>
-						<p style="text-align: left;">CPU: <span id="cpu_display"></span>VCores</p>
-						<input name="cpu" id="cpu_slider" style="width: 100%" type="range" min="0.1" max="0.3" value="1" step="1">
-					</div>
-					<input type="submit" value="Get Server" form="getserver">
-				</form>
-			</fieldset>
+			<h2>Active virtual machines:</h2>
 		</div>
 	</div>
 	
