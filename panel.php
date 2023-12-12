@@ -76,7 +76,7 @@
 						$counter = 1;
 						echo "<table> <tr> <th>ID</th> <th>VM ID</th> <th>SSH Connection Information</th> </tr>";
 						
-						while ($row = $dbmysqli->fetch_assoc()) {
+						while ($row = $result->fetch_assoc()) {
 
 							$temp = str_replace(" ", "", $row["connection_info"]);
 							$temp = str_replace("\n", "", $temp);
