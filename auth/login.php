@@ -32,6 +32,8 @@
 						echo '<p style="text-align: center; font-size: 15px; color: red;">Please check username and password.</p>';
 					} else if (isset($_GET["status"]) && $_GET["status"] == "logout") {
 						echo '<p style="text-align: center; font-size: 15px; color: green;">Logged out.</p>';
+					} else if (isset($_GET["status"]) && $_GET["status"] == "noauth") {
+						echo '<p style="text-align: center; font-size: 15px; color: red;">You must be logged in to access this page.</p>';
 					}
 				?>
 				
