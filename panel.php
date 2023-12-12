@@ -70,14 +70,21 @@
 					$result = $dbmysqli->query($query);
 					
 					if ($result && $result->num_rows > 0) {
+
+						$counter = 1;
+						echo "<table> <tr> <th>ID</th> <th>VM ID</th> <th>SSH Connection Information</th> </tr>";
+						
 						while ($row = $dbmysqli->fetch_assoc()) {
 
-							echo "VM ID: " . $row["vm_id"] . ", SSH CONNECTION INFO: " . $row["connection_info"] . "<br>";
+							echo "<tr> <td>" . $counter . "</td> <td>" . $row["vm_id"] . "</td> <td>" . $row["connection_info"] . "</td> </tr>";
+							$counter += 1;
 							
 						}
 
+						echo "</table>";
+
 					} else {
-						echo "<p>No virtual machines found. Try creating some!</p>"
+						echo "<div style='text-align: center'><p>No virtual machines found.</p></div>";
 					}
 				} else {
 
