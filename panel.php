@@ -33,7 +33,7 @@
 				$wspassword = 'admin';
 				$wsdatabase = 'sessions';
 	
-				$ipfile = fopen("../databaseIP.txt", "r") or die("Unable to open file!");
+				$ipfile = fopen("databaseIP.txt", "r") or die("Unable to open file!");
 				$remote_database_host = fgets($ipfile);
 				fclose($ipfile);
 	
