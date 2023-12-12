@@ -25,7 +25,9 @@
 				<label for="psw"><b>Password</b></label>
 				<input type="password" placeholder="Enter Password" name="psw" required>
 			
-				<button type="submit">Login</button>
+				<button type="submit">Create Account</button>
+
+				<p style="text-align: center; color: red">Signing up is currently disabled. Accounts can only be created by administrators.</p>
 			</div>
 
 		</form>
