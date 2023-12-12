@@ -152,7 +152,22 @@ span.psw {
 	padding-top: 16px;
 }
 
-/* Change styles for span and cancel button on extra small screens */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 @media screen and (max-width: 300px) {
 	span.psw {
 		display: block;
